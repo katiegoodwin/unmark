@@ -39,3 +39,6 @@
 	</ul>
 	<p style="text-align: center;">Version <?php echo $this->config->item('unmark_version'); ?></p>
 </div>
+<div id="panel-archive" class="nav-panel">
+	<h4 class="nav-heading">Archive</h4>
+</div>
