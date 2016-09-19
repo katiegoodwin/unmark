@@ -790,6 +790,27 @@ ul.nav-list {
                 top: 0;
                 border-radius: 50%;
                 border: 1px solid transparentize($color_dark_gray, .6);
+                i {
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -9px;
+                    top: 50%;
+                    margin-top: -8px;
+                    opacity: 0;
+                    -webkit-transition: all .2s;
+                    transition: all .2s;
+                    svg {
+                        fill: $color_dark_gray;
+                    }
+                }
+                &:hover {
+                    i {
+                        opacity: .4;
+                    }
+                }
             }
         }
         &.label-2 {

@@ -85,7 +85,9 @@
                             </a>
                         <?php else : ?>
                             <a title="Archive Mark" class="action mark-archive" data-action="mark_archive" href="#" data-id="<?php print $mark->mark_id; ?>">
-                                <i class="icon-check"></i>
+                                <i>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><rect x="25.8" y="6.95" width="4" height="30.5" transform="translate(23.84 -13.16) rotate(45)"/><rect x="12.16" y="22.45" width="4" height="13.43" transform="translate(-16.47 18.56) rotate(-45)"/></svg>
+                                </i>
                             </a>
                         <?php endif; ?>
                     </div>
