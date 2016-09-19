@@ -1,3 +1,4 @@
+<!--
 <div class="sidebar-default">
     <div class="sidebar-block" id="sidebar-graph">
         <div class="sidebar-inner">
@@ -33,5 +34,8 @@
     <?php endif; ?>
     <?php $this->load->view('layouts/sidebar/sidebar_notices'); ?>
 </div>
+-->
+
+<a class="close-sidebar" data-action="sidebar_collapse" href="#"><i class="icon-heading_close"></i></a>
 
 <div id="mark-info-dump" class="sidebar-mark-info"></div>

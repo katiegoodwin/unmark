@@ -25,12 +25,12 @@
     // Collapse Marks Info Sidebar
     // Hides the marks info and re-displays the default sidebar
     unmark.sidebar_collapse = function () {
-        if (Modernizr.mq('only screen and (max-width: 480px)')) {
-            $('.mark-actions').hide();
-            $('.sidebar-content').animate({right: '-85%'}, 600, function () {
-                $(this).hide();
-            });
-        }
+       
+        $('.mark-actions').hide();
+        $('.sidebar-content').animate({right: '-280px'}, 300, function () {
+            $(this).hide();
+        });
+    
         $('.mark').removeClass('view-inactive').removeClass('view-active');
         $('[id^=mark-] h2').attr('contenteditable',false).removeClass('editable'); // 1.6
         unmark.sidebar_expand(true);
@@ -45,14 +45,14 @@
         var expBtn = unmark.sidebar_content.find('a[data-action="sidebar_expand"] i');
 
         if (compress === true) {
-            return unmark.sidebar_content.animate({ width: '40.2914%' }, 800, function () {
+            return unmark.sidebar_content.animate({ width: '280px' }, 300, function () {
                 expBtn.removeClass('icon-heading_collapse').addClass('icon-heading_expand');
                 unmark.sidebar_content.removeClass('wide');
             });
         }
 
         if (expBtn.hasClass('icon-heading_collapse')) {
-            unmark.sidebar_content.animate({ width: '40.2914%' }, 800, function () {
+            unmark.sidebar_content.animate({ width: '280px' }, 300, function () {
                 expBtn.removeClass('icon-heading_collapse').addClass('icon-heading_expand');
                 unmark.sidebar_content.removeClass('wide');
             });
@@ -68,9 +68,9 @@
     // Hides the left navigation
     unmark.hideNavigation = function () {
         if (Modernizr.mq('only screen and (min-width: 480px)')) { $('.mark-actions').hide(); $('.branding').fadeOut(); }
-        unmark.nav_panel.stop().animate({ left: -285 }, 400);
-        unmark.main_panel.stop().animate({ left: 65 }, 200, function () {
-            $('.nav-panel').hide();
+        unmark.nav_panel.stop().animate({ left: 80 }, 400);
+        unmark.main_panel.stop().animate({ left: 340 }, 200, function () {
+            //$('.nav-panel').hide();
             $('.menu-item').removeClass('active-menu');
             $('.navigation-pane-links').show();
             $('.menu-activator i').removeClass('icon-menu_close').addClass('icon-menu_open');
@@ -84,7 +84,7 @@
         var panel_to_show = elem_ckd.attr('href'),
             panel_name = panel_to_show.replace(/^#/, ''),
             panel_width = parseInt(elem_ckd.attr('rel')),
-            panel_animate = panel_width + 65,
+            panel_animate = panel_width + 80,
             elem_parent = elem_ckd.parent(),
             panel_position = parseInt(unmark.nav_panel.css('left'));
 
@@ -123,7 +123,7 @@
         $('.menu-activator i').removeClass('icon-menu_open').addClass('icon-menu_close');
 
         // Check which panel to show
-        unmark.nav_panel.animate({ left: 65 }, { duration: 200, queue: false });
+        unmark.nav_panel.animate({ left: 80 }, { duration: 200, queue: false });
         unmark.main_panel.animate({ left: panel_animate }, { duration: 200, queue: false });
 
         unmark.nav_panel.animate({ width: panel_width, }, 200);

@@ -65,6 +65,7 @@
                     });
                 });
             } else {
+                unmark.sidebar_content.fadeIn(300);
                 unmark.sidebar_mark_info.html(output);
                 unmark.tagify_notes($('#notes-' + mark_id));
                 populateLabels();
@@ -84,11 +85,11 @@
             for (i in labels) {
                 count = labels[i].total_active_marks;
                 if (count === "1") {
-                    count = count + " mark";
+                    count = count + "";
                 } else if (count === "0") {
-                    count = "no marks";
+                    count = "0";
                 } else {
-                    count = count + " marks";
+                    count = count + "";
                 }
                 label_list.find('.label-'+labels[i].label_id + ' span').text(count);
             }

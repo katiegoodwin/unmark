@@ -44,10 +44,10 @@ button.disabled {
 }
 @mixin title-text {
     font-family: $title;
-    letter-spacing: 1px;
-    word-spacing: 1px;
+    letter-spacing: .3px;
+    word-spacing: .5px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 
@@ -89,10 +89,10 @@ button.disabled {
 // Title Elements
 @mixin title-text {
     font-family: $title;
-    letter-spacing: 1px;
-    word-spacing: 2px;
+    letter-spacing: .3px;
+    word-spacing: .5px;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 // Font Smoothing

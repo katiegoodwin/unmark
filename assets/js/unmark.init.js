@@ -51,11 +51,11 @@
         // Shows the Archive and More Buttons
         $(document).on('mouseenter', '.mark', function () {
             $(this).addClass('hide-dot');
-            $(this).find('.mark-actions').show();
+            $(this).find('.mark-actions').fadeIn(200);
         });
         $(document).on('mouseleave', '.mark', function () {
             $(this).removeClass('hide-dot');
-            $(this).find('.mark-actions').hide();
+            $(this).find('.mark-actions').fadeOut(200);
         });
 
         // Global Button / Action Link Run
@@ -93,7 +93,7 @@
                 unmark.show_mark_info(more_link);
             }
             // Hide Nav
-            unmark.hideNavigation();
+            //  unmark.hideNavigation();
         });
 
         // Watch for internal link click and run PJAX
