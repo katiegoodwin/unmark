@@ -1,18 +1,15 @@
 <?php defined("BASEPATH") or exit("No direct script access allowed");
-
 // Asset File Version Number
-define("ASSET_VERSION", "1474465799409");
-
+define("ASSET_VERSION", "1474379925726");
 // Prints marks count in nice format
 function printMarksCount($num)
 {
     if($num > 0) {
-        return sprintf(ngettext('', '', $num), $num);
-    } else { 
-        return _('0');
+        return sprintf(ngettext('%s mark', '%s marks', $num), $num);
+    } else {
+        return _('No marks');
     }
 }
-
 // Checks current date with passed date and responsds with proper verbiage.
 function formatExpires($date)
 {
@@ -23,14 +20,11 @@ function formatExpires($date)
         return "on " . date('m/d/Y', $timestamp); // Not Yet Expired
     }
 }
-
 // Takes a URL and returns a pretty looking version for view
 function niceUrl($url)
 {
     return rtrim(preg_replace('/https?:\/\/(www.)?/', '', $url), '/');
 }
-
-
 // Get URL For Bookmarklet
 function getFullUrl()
 {

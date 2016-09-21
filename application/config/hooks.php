@@ -15,7 +15,7 @@ $hook['pre_controller_method'][''] = array(
 	'class'    => 'Unmark_Localization',
     'function' => 'loadLanguage',
     'filename' => 'Unmark_Localization.php',
-    'filepath' => 'hooks', 
+    'filepath' => 'hooks',
 );
 
 

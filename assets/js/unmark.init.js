@@ -153,8 +153,11 @@
         });
 
         // Import Form Init
-        $('.importer').change(function (e) {
+        $('#importerUnmark').change(function (e) {
             return $('#importForm').submit();
+        });
+        $('#importerReadability').change(function (e) {
+            return $('#importFormReadability').submit();
         });
         $('.importerHTML').change(function (e) {
             return $('#importFormHTML').submit();
