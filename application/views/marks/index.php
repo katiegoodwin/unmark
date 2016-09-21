@@ -2,7 +2,7 @@
     <div class="marks-heading-wrapper">
         <div class="marks-heading-bar">
             <?php if (isset($errors['2'])) : ?>
-            <h2><?php echo _('Sorry, No marks found')?></h2>
+            <h2><?php echo _('Sorry, No Marks Found')?></h2>
             <?php if (isset($_GET['q']) & $lookup_type == "search") : // Only if this is for a search ?>
             <div class="marks continue-search no-results"><?php echo sprintf( _('Would you like to <a href="/marks/archive/search?q=%s">try searching your archive</a>?'), (isset($_GET['q'])) ? $_GET['q'] : ''); ?></div>
             <?php elseif ($lookup_type == 'tag') : ?>

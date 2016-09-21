@@ -1,10 +1,11 @@
 <div class="menu-item brand">
-	<a>
+	<a title="<?php echo _('View All Marks'); ?>" href="/marks">
 		<i>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 60"><defs><style>.a{fill:#5cc0e8;}.b{fill:#f3776e;}.c{fill:#c1e1f1;}.d{fill:#35acd4;}.e{fill:#0098cb;}</style></defs><title>um_logo</title><path class="a" d="M0,0V40a20,20,0,0,0,40,0V0H0Z"/><polygon class="b" points="40 40 40 0 0 0 40 40"/><polygon class="c" points="40 40 0 40 0 0 40 40"/><path class="d" d="M0.69,45.22L40,40H0A20,20,0,0,0,.69,45.22Z"/><path class="e" d="M0.09,41.81L40,40H0C0,40.61,0,41.21.09,41.81Z"/></svg>
 		</i>
 	</a>
 </div>
+<!--
 <div class="menu-marks menu-item">
 	<a title="<?php echo _('View All Marks'); ?>" href="/marks">
 		<i>
@@ -12,6 +13,7 @@
 		</i>
 	</a>
 </div>
+-->
 <div data-menu="panel-label" class="menu-labels menu-item">
 	<a title="<?php echo _('View Labels'); ?>" rel="260" href="#panel-label">
 		<i>
@@ -33,7 +35,7 @@
 		</i>
 	</a>
 </div>
-<div data-menu="panel-archives" class="menu-archive menu-item">
+<div data-menu="panel-archive" class="menu-archive menu-item">
 	<a title="<?php echo _('View Archive'); ?>" href="/marks/archive">
 		<i>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><title>archive</title><path d="M40,11.68V40H0V11.68L4,0H36ZM5.14,12H34.86l-2.5-8H7.64Z"/></svg>

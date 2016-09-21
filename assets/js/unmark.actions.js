@@ -27,9 +27,7 @@
     unmark.sidebar_collapse = function () {
        
         $('.mark-actions').hide();
-        $('.sidebar-content').animate({right: '-280px'}, 300, function () {
-            $(this).hide();
-        });
+        $('.sidebar-content').removeClass('active');
     
         $('.mark').removeClass('view-inactive').removeClass('view-active');
         $('[id^=mark-] h2').attr('contenteditable',false).removeClass('editable'); // 1.6
@@ -45,17 +43,11 @@
         var expBtn = unmark.sidebar_content.find('a[data-action="sidebar_expand"] i');
 
         if (compress === true) {
-            return unmark.sidebar_content.animate({ width: '280px' }, 300, function () {
-                expBtn.removeClass('icon-heading_collapse').addClass('icon-heading_expand');
-                unmark.sidebar_content.removeClass('wide');
-            });
+            return unmark.sidebar_content.addClass('active');
         }
 
         if (expBtn.hasClass('icon-heading_collapse')) {
-            unmark.sidebar_content.animate({ width: '280px' }, 300, function () {
-                expBtn.removeClass('icon-heading_collapse').addClass('icon-heading_expand');
-                unmark.sidebar_content.removeClass('wide');
-            });
+            unmark.sidebar_content.addClass('active');
         } else {
             unmark.sidebar_content.animate({ width: '75%' }, 800, function () {
                 expBtn.removeClass('icon-heading_expand').addClass('icon-heading_collapse');

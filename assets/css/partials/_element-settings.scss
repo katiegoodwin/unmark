@@ -63,7 +63,7 @@ button.disabled {
 
 
 // The Unmark Ball
-@mixin unmark-label-ball($top: 0, $hor: 0, $size: 20px, $right: false) {
+@mixin unmark-label-ball($top: 0, $hor: 0, $size: 16px, $right: false) {
     content: "";
     position: absolute;
     top: $top;
