@@ -677,6 +677,8 @@ ul.nav-list {
         border-bottom:1px solid $color_lighter;
         padding: 28px 85px 32px 84px;
         position:relative;
+        -webkit-transition: all .3s;
+        transition: all .3s;
         h2 {
             margin:0 0 10px 0;
             font-weight: 400;
@@ -919,7 +921,7 @@ ul.nav-list {
     padding-right:0;
     position: absolute;
     right: 0;
-    padding: 24px;
+    padding: 80px 24px 24px;
     overflow:scroll;
     -webkit-overflow-scrolling: touch;
     z-index: 600;
@@ -1075,73 +1077,87 @@ ul.nav-list {
         }
     }
     .sidebar-label {
-        background: white;
+        //background: white;
         position: relative;
-        margin-top: 56px;
-        height: 56px;
-        @include drop-shadow-border();
+        //margin-top: 56px;
+        //height: 56px;
+        //@include drop-shadow-border();
         &:before {
-            @include unmark-label-ball(19px, 20px, 18px);
+            //@include unmark-label-ball(5px, 16px, 0px);
+            content: "Label";
+            @include title-text;
+            display: block;
+            margin-bottom: 16px;
+            font-size: 12px;
+            color: $color_dark_gray;
         }
         a {
             margin: 0;
-            padding: 21px 0 21px 50px;
-            @include title-text;
+            //padding: 21px 0 21px 50px;
+            //@include title-text;
             font-size: 12px;
-            color: $color_grey;
-            display: block;
+            //display: block;
+            vertical-align: 2px;
+            padding-left: 4px;
+            font-weight: 500;
         }
         &.label-2 {
             //background: rgba($color_orange, .2);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_orange, 36) inset;
-            &:before { background: $color_orange; }
+            //box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_orange, 36) inset;
+            //&:before { background: $color_orange; }
             a { color: $color_orange; }
         }
         &.label-3 {
             //background: rgba($color_blue, .2);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_blue, 46) inset;
-            &:before { background: $color_blue; }
+            //box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_blue, 46) inset;
+            //&:before { background: $color_blue; }
             a { color: $color_blue; }
         }
         &.label-4 {
             //background: rgba($color_yellow, .2);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_yellow, 29) inset;
-            &:before { background: $color_yellow; }
+            //box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_yellow, 29) inset;
+            //&:before { background: $color_yellow; }
             a { color: $color_yellow; }
         }
         &.label-5 {
             //background: rgba($color_purple, .2);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_purple, 38) inset;
-            &:before { background: $color_purple; }
+            //box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_purple, 38) inset;
+            //&:before { background: $color_purple; }
             a { color: $color_purple; }
         }
         &.label-6 {
             //background: rgba($color_green, .2);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_green, 39) inset;
-            &:before { background: $color_green; }
+            //box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_green, 39) inset;
+            //&:before { background: $color_green; }
             a { color: $color_green; }
         }
         &.label-7 {
             //background: rgba($color_pink, .2);
-            box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_pink, 34) inset;
-            &:before { background: $color_pink; }
+            //box-shadow: 0 2px 3px 0 rgba(0,0,0,0.08), 0 1px 0 0 rgba(0,0,0,0.02), 0 0 0 100px lighten($color_pink, 34) inset;
+            //&:before { background: $color_pink; }
             a { color: $color_pink; }
+            ul.sidebar-label-list li.label-7 a:before {
+                box-shadow: 0 0 0 3px lighten($color_gray, 2%), 0 0 0 4px darken($color_gray, 10%);
+                opacity: 1;
+            }
         }
         #label-chosen {
             position: absolute;
-            left: 250px;
-            top: 80px;
+            left: 172px;
+            top: 33px;
             z-index: 9999;
             display: none;
-            font-size: 11px;
-            @include title-text;
-            color: $color_grey;
-            &.label-2 { color: $color_orange; }
-            &.label-3 { color: $color_blue; }
-            &.label-4 { color: $color_yellow; }
-            &.label-5 { color: $color_purple; }
-            &.label-6 { color: $color_green; }
-            &.label-7 { color: $color_red; }
+            font-size: 12px;
+            //@include title-text;
+            color: $color_dark_gray;
+            background: lighten($color_gray, 1%);
+            min-width: 54px;
+            //&.label-2 { color: $color_orange; }
+            //&.label-3 { color: $color_blue; }
+            //&.label-4 { color: $color_yellow; }
+            //&.label-5 { color: $color_purple; }
+            //&.label-6 { color: $color_green; }
+            //&.label-7 { color: $color_red; }
         }
     }
     .sidebar-info-panel {
@@ -1592,11 +1608,11 @@ canvas.graph {
             display: block;
             color: $color_grey;
             text-align: left;
-            padding: 15px 0 15px 32px;
+            padding: 10px 20px 10px 0;
             position: relative;
             font-size: 11px;
             &:before {
-                @include unmark-label-ball(6px, 10px, 20px);
+                @include unmark-label-ball(2px, 0px, 16px);
                 opacity: 0.3;
             }
             &:hover {
@@ -1636,23 +1652,23 @@ canvas.graph {
 }
 
 #mark-info-dump ul.sidebar-label-list {
-    width: 100%;
-    display: none;
-    background: lighten($color_lighter, 5%);
-    position: absolute;
-    z-index: 1;
-    top: 56px;
-    left: 0px;
-    padding: 15px 10px;
-    border-top: 1px solid transparentize(black, 0.95);
-    @include drop-shadow-border;
+    //width: 100%;
+    //display: none;
+    //background: lighten($color_lighter, 5%);
+    //position: absolute;
+    //z-index: 1;
+    //top: 56px;
+    //left: 0px;
+    //padding: 15px 10px;
+    //border-top: 1px solid transparentize(black, 0.95);
+    //@include drop-shadow-border;
     li {
         a {
             right: 0;
             top: 0px;
             width: 100%;
             position: relative;
-            padding: 15px 0 15px 32px;
+            padding: 10px 0 10px 24px;
             font-size: 11px;
         }
     }

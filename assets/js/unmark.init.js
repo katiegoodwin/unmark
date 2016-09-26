@@ -95,7 +95,7 @@
             // Hide Nav
             //  unmark.hideNavigation();
             // Add active class to mark
-            $(this).siblings().removeClass('view-inactive');
+            $(this).removeClass('view-inactive');
             $(this).siblings().removeClass('view-active');
             $(this).siblings().addClass('view-inactive');
             $(this).addClass('view-active');
