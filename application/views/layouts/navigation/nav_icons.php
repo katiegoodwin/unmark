@@ -5,7 +5,7 @@
 		</i>
 	</a>
 </div>
-<!--
+
 <div class="menu-marks menu-item">
 	<a title="<?php echo _('View All Marks'); ?>" href="/marks">
 		<i>
@@ -13,7 +13,7 @@
 		</i>
 	</a>
 </div>
--->
+
 <div data-menu="panel-label" class="menu-labels menu-item">
 	<a title="<?php echo _('View Labels'); ?>" rel="260" href="#panel-label">
 		<i>
