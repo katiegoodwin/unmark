@@ -108,6 +108,10 @@ class Mark_Import
                         $options['notes'] = $markObject->notes;
                         $tags = getTagsFromHash($options['notes']);
                     }
+                    // Used by HTMLImport
+                    else if (isset($markObject->tags) && ! empty($markObject->tags)) {
+                        $tags = preg_split('/,/', $markObject->tags);
+                    }
     
                     // Figure if any automatic labels should be applied
                     $smart_info = getSmartLabelInfo($markObject->url);
